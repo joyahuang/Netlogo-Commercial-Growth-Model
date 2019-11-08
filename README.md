@@ -16,7 +16,7 @@ goalnode|The node of the intersection that is the nearest to their goal
 alongpoints|The nodes along the shortest path to goal
 speed|Moving speed along the shortest path
 step|Steps taken in the shortest path
-shop|The place that the agent decide to shop at.
+shop|The place that the agent decides to shop at.
 times|Times of consuming in one commuting.
 
 Action|Explanation
@@ -28,7 +28,41 @@ consume-at-goal|When they reach destination, they may consume depend on the fact
 ### Patch
 Property|Explanation
 -|-
-landuse|
+landuse|The current land use : Commercial land, Industrial land, Green land
+fatherlanduse|The origninal land use when the map was imported.
+open|Consumption factor(relate to lasting and cluster), which will decide the amount of money agents give
+lasting|The time that the shop has been living
+cluster|Degree of commercial aggregation
+close|Death factor(relate to earning and rentalsum)
+earningsum|The cumulative earning of the land
+earning|The cumulative earning of the shop
+rentalsum|The cumulative rental of the shop
+rental|Rental for the current month(relate to cluster)
+rentaltotal|The cumulative rental of the land
+chose|Be selected as the recommended commercial land
+net|earningsum-rentaltotal
+
+Action|Explanation
+-|-
+calculate|Calculate the mutual influence of cluster, lasting, rental
+Birth-or-death|If net>0, the shop survive. Else, the land has to restart the process.
+
+###  Adjustable variable
+Name|Explanation
+-|-
+ratio|The ratio of formal and informal shop
+weight-distance|The influnce of distance on consumption
+weight-lasting|The influnce of lasting on open
+weight-cluster|The influnce of cluster on open
+moneyy|The initial money owned by persons
+
+### Indicators
+Name|Explanation
+-|-
+earnings|The earning of survived shops
+rentaltotals|The rental of survived shops
+ranking|The rank of net
+
 
 
 ## Program
