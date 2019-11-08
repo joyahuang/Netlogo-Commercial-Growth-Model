@@ -1,10 +1,12 @@
 # Netlogo-Commercial-Growth-Model
 Team: Zhuoya Huang, Yanhan Pan, Zichen Liu. Tutor: Wei Zhu.
-##Introductory
+## Introductory
 In urban planning, the commercial facilities planning is of top importance. By NetLogo simulation, we can control the influence of all kinds of influence factors to determine the location and scale of urban commercial facilities, so as to provide reference for planning and design.
 
-##Model
+## Model
 First, we divide influential factors into the following categories: commercial cluster degree, commercial potential, store history, openness, road type, land use, agent commute purpose. Agents will consume a certain amount of money and time at a certain store based on their commute purpose, simulating profit and loss. In the meantime, store rent also can change with turnover profit. The death and life of stores are determined by two factors: store net profit and rent. If the net profit is greater than the rent, the store can survive, and vice versa. In the process of executing the program, the weight of each factor can be adjusted to simulate the commercial growth model in different situations.
 
-#Program
+## Program
 The process of program operation is as follows: import road network of the planned area and land use to show the original commercial scope, in order to make a comparison with the later result, and then clicks the clean button to remove the original business to avoid affecting the simulation. After adjusting the weight of each influencing factor, the agents start to run the program, and the flow of agents is generated every 6 seconds, and the commuting purpose, consumption times and consumption amount are set according to the proportion. At the same time, the stores site selection also changes with the flow of agents. After the model reaches a stable converge, click the left button to output the location of the store with the highest profit and rent of the first 30% by color level, so as to intuitively feel which location is more suitable for the commercial under the influence of specified factors.
+
+Video Introduction in Chinese: https://www.bilibili.com/video/av40330606
